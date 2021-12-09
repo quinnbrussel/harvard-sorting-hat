@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="container-md p-3 mb-2 bg-danger text-white">
+    <form action="/results" method="post">
+        <h2 class="dorm-title">{{ dorm_name }}</h2>
+        <div class="dorm-description">
+            <p>{{ description }}</p>
+        </div>
+    </form>
+    <img class="size" src="{{ image }}" alt="Fuck Flask">
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="container-md p-3 mb-2 bg-danger text-white">
+    <form action="/form_two" method="post">
+        <h2 class="question-padding">{{ question }}</h2>
+        {% for row in answers %}
+            <div class="question-padding">
+                <button name="{{ question }}" value="{{ loop.index }}" type="submit" class="btn btn-dark btn-lg" style="width: 80%">{{ row }}</button>
+            </div>
+        {% endfor %}
+    </form>
+    <img class="size" src="{{ images }}" alt="fuck flask">
+</div>
+{% endblock %}
